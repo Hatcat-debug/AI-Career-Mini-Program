@@ -1,4 +1,5 @@
 <view class="page-wrapper">
+  <!-- 统一 Top Bar -->
   <view class="top-bar">
     <view class="title-lg">职业测评</view>
     <view class="coin-pill">
@@ -8,29 +9,32 @@
     </view>
   </view>
 
-  <scroll-view scroll-y class="content-scroll">
+  <scroll-view scroll-y class="page-content">
     <view class="container">
-      <view class="hero-card">
+      <!-- Hero Card -->
+      <view class="hero-card-base gradient-indigo">
         <view class="hero-bg-deco"></view>
         <view class="hero-content">
           <view class="hero-tag">AI 驱动</view>
           <view class="hero-title">3分钟定位你的<br/>职业基因</view>
           <view class="hero-desc">探索天赋，精准匹配未来方向</view>
         </view>
-        <image class="hero-3d-icon" src="/images/rocket_3d.png" mode="widthFix"></image>
+        <!-- 装饰图标 -->
+        <view class="hero-icon">🚀</view>
       </view>
 
+      <!-- 任务列表 -->
       <view class="card">
-        <view class="flex-between mb-4">
+        <view class="flex-between mb-3">
           <text class="title-md">今日任务</text>
           <text class="sub-text font-medium">3/5</text>
         </view>
         
         <view class="task-row active-task" hover-class="hover-scale">
           <view class="flex-row">
-            <view class="icon-box gradient-indigo">🎯</view>
+            <view class="icon-box gradient-indigo-light">🎯</view>
             <view class="ml-3">
-              <view class="text-bold text-main">完成兴趣测评</view>
+              <view class="text-bold">完成兴趣测评</view>
               <view class="task-reward">+200 金币</view>
             </view>
           </view>
@@ -39,7 +43,7 @@
 
         <view class="task-row dim-task">
           <view class="flex-row">
-            <view class="icon-box gradient-green">📊</view>
+            <view class="icon-box gradient-green-light">📊</view>
             <view class="ml-3">
               <view class="text-bold text-gray">能力自评</view>
               <view class="task-reward text-gray">+150 金币</view>
@@ -49,9 +53,10 @@
         </view>
       </view>
 
-      <view class="flex-between mb-3 mt-4">
+      <!-- 推荐方向 Grid -->
+      <view class="flex-between mb-3 mt-2">
         <text class="title-md">推荐方向</text>
-        <text class="text-primary text-sm font-bold">全部 ></text>
+        <text class="text-primary text-xs font-bold">全部 ></text>
       </view>
       
       <view class="grid-2">
@@ -59,14 +64,14 @@
           <view class="match-badge">92% 匹配</view>
           <view class="icon-circle bg-purple-light">💻</view>
           <view class="card-title">前端开发</view>
-          <view class="sub-text text-xs mt-1">高薪 • 热门</view>
+          <view class="sub-text text-xs mt-2">高薪 • 热门</view>
         </view>
         
         <view class="career-card">
           <view class="match-badge gray">85% 匹配</view>
           <view class="icon-circle bg-blue-light">🎨</view>
           <view class="card-title">UI 设计师</view>
-          <view class="sub-text text-xs mt-1">创意 • 灵活</view>
+          <view class="sub-text text-xs mt-2">创意 • 灵活</view>
         </view>
       </view>
     </view>

@@ -1,82 +1,69 @@
-/* 引入全局变量 (app.wxss) */
-
-/* 1. 顶栏样式 (保持一致) */
-.top-bar {
-  padding: 100rpx 32rpx 20rpx;
-  background: rgba(243, 244, 246, 0.9); backdrop-filter: blur(10px);
-  display: flex; justify-content: space-between; align-items: center;
-  position: sticky; top: 0; z-index: 100;
-}
-.coin-pill {
-  background: #FFF7ED; padding: 8rpx 12rpx 8rpx 24rpx; border-radius: 99rpx;
-  display: flex; align-items: center; gap: 16rpx; border: 2rpx solid #FFEDD5;
-}
-.coin-symbol { color: #D97706; font-weight: 800; }
-.coin-val { color: #92400E; font-weight: 700; font-size: 26rpx; }
-.avatar-xs { width: 60rpx; height: 60rpx; border-radius: 50%; border: 2rpx solid #fff; }
-
-/* 2. Hero Card 变体 */
-.hero-card {
-  border-radius: 40rpx; padding: 40rpx; position: relative; overflow: hidden;
-  margin-bottom: 40rpx; box-shadow: var(--shadow-lg);
-  color: white;
-}
-.interview-hero {
-  background: #1F2937; /* 深色背景突显紧迫感 */
-  background-image: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+/* Hero Dark Gradient */
+.gradient-dark {
+  background: linear-gradient(135deg, #1E1B4B 0%, #4338CA 100%);
 }
 .hero-bg-overlay {
   position: absolute; top: 0; right: 0; width: 300rpx; height: 300rpx;
-  background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
   border-radius: 50%; transform: translate(30%, -30%);
 }
 .relative { position: relative; }
 .z-10 { z-index: 10; }
+.text-white { color: white; }
+.opacity-80 { opacity: 0.8; }
 
+/* 标签与时间 */
 .hero-tag-red {
   background: #EF4444; color: white; font-weight: bold; font-size: 20rpx;
-  padding: 4rpx 12rpx; border-radius: 8rpx; display: flex; align-items: center;
+  padding: 6rpx 16rpx; border-radius: 8rpx; display: flex; align-items: center;
+  line-height: 1;
 }
 .hero-tag-red::before {
   content: ''; width: 8rpx; height: 8rpx; background: white; border-radius: 50%;
-  margin-right: 8rpx; animation: blink 1s infinite;
+  margin-right: 10rpx; animation: blink 1s infinite;
 }
-.hero-time { font-size: 26rpx; opacity: 0.9; font-family: monospace; }
+.hero-time { 
+  font-size: 26rpx; opacity: 0.9; 
+  /* 修复：移除 monospace，使用系统字体 */
+  font-weight: 500; letter-spacing: 1rpx;
+  color: white; 
+}
 
+/* 公司 Logo 容器 */
 .company-logo-lg {
-  width: 100rpx; height: 100rpx; background: rgba(255,255,255,0.1);
+  width: 100rpx; height: 100rpx; background: rgba(255,255,255,0.15); backdrop-filter: blur(4px);
   border-radius: 24rpx; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; /* 防止被压缩 */
 }
-.hero-title-md { font-size: 36rpx; font-weight: 700; margin-bottom: 8rpx; }
-.hero-desc { font-size: 24rpx; opacity: 0.7; }
 
 .btn-hero-action {
-  background: var(--primary); color: white; border-radius: 20rpx;
-  font-weight: 600; font-size: 28rpx; width: 100%; padding: 20rpx 0;
-  box-shadow: 0 8rpx 20rpx rgba(99,102,241,0.3); margin-top: 20rpx;
+  background: #fff; color: var(--primary); border-radius: 99rpx;
+  font-weight: 700; font-size: 28rpx; width: 100%; padding: 24rpx 0;
+  margin-top: 32rpx; /* 增加上方间距 */
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
 }
 
-/* 3. 通用列表项 (Card Item) */
-.card-item {
-  background: #fff; padding: 24rpx; border-radius: 24rpx;
+/* 列表卡片 */
+.list-card {
+  background: #fff; padding: 32rpx; border-radius: 32rpx; /* 统一圆角和内边距 */
   display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 20rpx; box-shadow: var(--shadow-sm);
+  margin-bottom: 24rpx; /* 增加卡片间距 */
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.1s;
 }
 .hover-scale { transform: scale(0.98); }
 
 .icon-box {
-  width: 88rpx; height: 88rpx; border-radius: 20rpx; 
+  width: 88rpx; height: 88rpx; border-radius: 24rpx; 
   display: flex; align-items: center; justify-content: center; font-size: 36rpx;
 }
 .bg-orange-light { background: #FFF7ED; color: #D97706; }
 .bg-blue-light { background: #EFF6FF; color: #2563EB; }
 
-.item-title { font-weight: 700; color: var(--text-main); font-size: 30rpx; }
-.item-sub { font-size: 24rpx; color: var(--text-sub); margin-top: 4rpx; }
-
+.item-title { font-weight: 700; color: var(--text-main); font-size: 30rpx; margin-bottom: 4rpx; }
 .time-badge {
   background: #F3F4F6; color: var(--text-sub); font-size: 24rpx; font-weight: 600;
-  padding: 8rpx 16rpx; border-radius: 12rpx;
+  padding: 8rpx 20rpx; border-radius: 12rpx;
 }
 
 @keyframes blink { 50% { opacity: 0.4; } }

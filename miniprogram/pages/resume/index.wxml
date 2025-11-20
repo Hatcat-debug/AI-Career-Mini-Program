@@ -8,27 +8,54 @@
     </view>
   </view>
 
-  <scroll-view scroll-y class="content-scroll">
+  <scroll-view scroll-y class="page-content">
     <view class="container">
       
-      <view class="hero-card resume-hero">
-        <view class="hero-bg-circle"></view>
-        <view class="flex-row relative z-10">
-          <view class="progress-ring-white">
-             <view class="ring-bg">
-               <text class="score-text">80</text>
-               <text class="score-unit">%</text>
-             </view>
+      <!-- 全新设计的 Resume Hero Card -->
+      <view class="resume-hero-card">
+        <!-- 装饰背景光斑 -->
+        <view class="bg-glow glow-1"></view>
+        <view class="bg-glow glow-2"></view>
+
+        <view class="relative z-10">
+          <view class="flex-between" style="align-items: flex-start;">
+            <!-- 左侧分数信息 -->
+            <view>
+              <view class="hero-label">简历评分</view>
+              <view class="score-row">
+                <text class="score-num">85</text>
+                <text class="score-total">/100</text>
+              </view>
+              <view class="rank-badge">
+                <text>🏆 超过 92% 求职者</text>
+              </view>
+            </view>
+
+            <!-- 右侧仪表盘 (CSS Conic Gradient) -->
+            <view class="dashboard-gauge">
+              <view class="gauge-track"></view>
+              <view class="gauge-inner">
+                <text class="grade-text">A</text>
+                <text class="grade-sub">优秀</text>
+              </view>
+            </view>
           </view>
-          <view class="ml-4 text-white">
-            <view class="hero-title-md">简历完善度</view>
-            <view class="hero-desc mt-1">击败了 85% 的竞争者</view>
-            <view class="hero-link mt-2">预览 PDF ></view>
+
+          <!-- 分割线 -->
+          <view class="divider-line"></view>
+
+          <!-- 底部操作栏 -->
+          <view class="flex-between">
+            <view class="update-tip">上次更新: 10分钟前</view>
+            <view class="flex-row">
+              <view class="btn-glass mr-2">AI 诊断</view>
+              <view class="btn-white">预览 PDF</view>
+            </view>
           </view>
         </view>
       </view>
 
-      <view class="section-header flex-between mb-3">
+      <view class="flex-between mb-3">
         <text class="title-md">我的简历</text>
         <view class="icon-btn-sm">⚙️</view>
       </view>
@@ -49,7 +76,7 @@
         </view>
       </view>
 
-      <view class="section-header mt-4 mb-3">
+      <view class="mb-3 mt-4">
         <text class="title-md">优化建议</text>
       </view>
 

@@ -8,10 +8,11 @@
     </view>
   </view>
 
-  <scroll-view scroll-y class="content-scroll">
+  <scroll-view scroll-y class="page-content">
     <view class="container">
       
-      <view class="hero-card interview-hero">
+      <!-- Hero Card: 改为深色渐变，更具科技感 -->
+      <view class="hero-card-base gradient-dark">
         <view class="hero-bg-overlay"></view>
         <view class="hero-content relative z-10">
           <view class="flex-between mb-3">
@@ -19,13 +20,13 @@
             <view class="hero-time">30分钟后开始</view>
           </view>
           
-          <view class="flex-row mb-4">
+          <view class="flex-row mb-3">
             <view class="company-logo-lg">
               <text style="font-size: 48rpx;">🎵</text>
             </view>
             <view class="ml-3">
-              <view class="hero-title-md">字节跳动</view>
-              <view class="hero-desc">前端开发工程师 • 视频面试</view>
+              <view class="title-md text-white">字节跳动</view>
+              <view class="sub-text text-white opacity-80">前端开发工程师 • 视频面试</view>
             </view>
           </view>
 
@@ -33,32 +34,33 @@
         </view>
       </view>
 
-      <view class="section-header flex-between mb-3">
+      <view class="flex-between mb-3 mt-4">
         <text class="title-md">明日日程</text>
-        <text class="link-text">全部日程 ></text>
+        <text class="text-primary text-xs">全部日程 ></text>
       </view>
 
-      <view class="card-item" hover-class="hover-scale">
+      <!-- 日程列表 -->
+      <view class="list-card" hover-class="hover-scale">
         <view class="flex-row">
           <view class="icon-box bg-orange-light">
             <text>🛍️</text>
           </view>
           <view class="ml-3">
             <view class="item-title">阿里巴巴</view>
-            <view class="item-sub">高级前端专家</view>
+            <view class="sub-text">高级前端专家</view>
           </view>
         </view>
         <view class="time-badge">14:00</view>
       </view>
 
-      <view class="card-item" hover-class="hover-scale">
+      <view class="list-card" hover-class="hover-scale">
         <view class="flex-row">
           <view class="icon-box bg-blue-light">
             <text>☁️</text>
           </view>
           <view class="ml-3">
             <view class="item-title">腾讯云</view>
-            <view class="item-sub">全栈工程师</view>
+            <view class="sub-text">全栈工程师</view>
           </view>
         </view>
         <view class="time-badge">16:30</view>
