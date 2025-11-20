@@ -1,0 +1,53 @@
+<view class="map-container">
+  <view class="top-bar-dark">
+    <view class="title-lg text-white">职业地图</view>
+    <view class="coin-pill glass-pill">
+      <text style="color: #FCD34D; font-weight:bold;">¥</text>
+      <text style="color: #fff; font-weight:bold; margin-left:8rpx;">2,380</text>
+    </view>
+  </view>
+
+  <view class="status-card glass-card">
+    <view class="flex-row">
+      <view class="job-icon-box">&lt;/&gt;</view>
+      <view class="ml-4">
+        <view class="title-md text-white" style="margin-bottom: 4rpx;">前端工程师</view>
+        <view class="sub-text text-blue-200">Lv.2 | 经验 2年</view>
+      </view>
+    </view>
+    <view class="icon-btn-dark">✏️</view>
+  </view>
+
+  <view class="map-wrapper">
+    <view class="map-header">
+      <text class="section-header-text">生涯星图</text>
+      <view class="map-legend">
+        <view class="dot active"></view><text>已点亮</text>
+      </view>
+    </view>
+    
+    <view class="galaxy-container">
+      <view class="orbit orbit-1"></view>
+      <view class="orbit orbit-2"></view>
+
+      <view class="star-center">
+        <view class="star-core">&lt;/&gt;</view>
+        <view class="star-glow"></view>
+      </view>
+
+      <view class="planet-orbit-wrap p1-orbit">
+        <view class="planet-self-rotate">
+          <view class="planet-body">架</view>
+          <text class="planet-label">架构师</text>
+        </view>
+      </view>
+
+      <view class="planet-orbit-wrap p2-orbit">
+         <view class="planet-self-rotate-rev">
+          <view class="planet-body">全</view>
+          <text class="planet-label">全栈</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
